@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+
+<html class="no-js" lang="fr">
+
+<head>
+	<meta charset="utf-8"  />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"  />
+	<meta name="author" content=""  />
+	<meta name="description" content=""  />
+	<meta name="keywords" content=""  />
+	<meta name="distribution" content="global"  />
+	<meta name="robots" content="index, follow"  />
+	<meta name="google" content="nositelinkssearchbox"  />
+
+	<meta property="og:type" content="website"  />
+	<meta property="og:site_name" content=""  />
+	<meta property="og:title" content=""  />
+	<meta property="og:url" content=""  />
+	<meta property="og:description" content=""  />
+	
+	<link rel="manifest" href="manifest.json"  />
+	
+	<meta name="mobile-web-app-capable" content="yes"  />
+	<meta name="apple-mobile-web-app-capable" content="yes"  />
+	<meta name="application-name" content=""  />
+	<meta name="apple-mobile-web-app-title" content=""  />
+	<meta name="msapplication-starturl" content="/"  />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no"  />
+	
+	<link rel="apple-touch-icon" href="web/img/logo/styletools_apple_57x57.png" sizes="57x57"  />
+	<link rel="apple-touch-icon" href="web/img/logo/styletools_apple_60x60.png" sizes="60x60"  />
+	<link rel="apple-touch-icon" href="web/img/logo/styletools_apple_72x72.png" sizes="72x72"  />
+	<link rel="apple-touch-icon" href="web/img/logo/styletools_apple_76x76.png" sizes="76x76"  />
+	<link rel="apple-touch-icon" href="web/img/logo/styletools_apple_114x114.png" sizes="114x114"  />
+	<link rel="apple-touch-icon" href="src/web/img/logo/styletools_apple_120x120.png" sizes="120x120"  />
+	<link rel="apple-touch-icon" href="web/img/logo/styletools_apple_152x152.png" sizes="152x152"  />
+	
+	<link rel="icon" href="web/img/logo/styletools_16x16.png" sizes="16x16" />	
+	<link rel="icon" href="web/img/logo/styletools_32x32.png" sizes="32x32" />
+	<link rel="icon" href="web/img/logo/styletools_96x96.png" sizes="96x96" />
+	<link rel="icon" href="web/img/logo/styletools_196x196.png" sizes="196x196" />	
+
+	<link rel="stylesheet" href="dist/css/styletools.min.css"  />
+	<link rel="stylesheet" href="dist/css/responsive_application.min.css"  />
+	
+	{% for css in stylesheets %}
+		{{ css|raw }}
+	{% endfor %}
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"  />
+	
+	<title>{% block title %}Styletools{% endblock title %}</title>
+</head>
+
+<body>
+	<!--[if lte IE 9]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+	<![endif]-->
+	
+	<header>
+		<nav class="horizontal_navbar bc_darkblue">
+			{{ navicon|raw }}
+		</nav>
+		
+		<div class="dropdown_menu_left bc_darkblue">
+			<ul class="navbar_gateways">
+				<li><a href="/Styletools-Example/" class="bc_transition">Main page</a></li>
+				<li><a href="/Styletools-Example/register" class="bc_transition">Register</a></li>
+				<li><a href="/Styletools-Example/login" class="bc_transition">Login</a></li>
+				<li><a href="#" {{ modalLink|raw }} class="bc_transition">About</a></li>
+			</ul>
+		</div>
+		
+		{{ modal|raw }}
+	</header>
+	
+	{% block body %}
+	{% endblock body %}
+	
+	<footer class="footer bottom_fixed height_10 white bc_darkblue">
+		<p class="margin_auto">&copy; 2019 - Styletools</p>
+	</footer>
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="></script>
+	<script src="/Styletools/dist/js/vendor/modernizr-3.6.0.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="/Styletools/dist/js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+	<script src="dist/js/styletools.min.js"></script>
+	
+	{% for js in javascripts %}
+		{{ js|raw }}
+	{% endfor %}
+
+	<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+	<script>
+		window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+		ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+	</script>
+	<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+
+</html>

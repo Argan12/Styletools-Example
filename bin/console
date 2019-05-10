@@ -1,0 +1,84 @@
+#!/usr/bin/php
+
+<?php
+
+require_once('vendor/autoload.php');
+
+use Styletools\Libs\Console\ControllerBuilder;
+use Styletools\Libs\Console\ModelBuilder;
+use Styletools\Libs\Console\FormBuilder;
+
+$controllerBuilder = new ControllerBuilder();
+$modelBuilder = new ModelBuilder();
+$formBuilder = new FormBuilder();
+
+if (isset($argv[1]))
+{
+	if ($argv[1] == 'new')
+	{
+		if (isset($argv[2]))
+		{
+			if ($argv[2] == 'controller')
+			{
+				echo "\tWhat is your controller's name ? \n";
+
+				$writeController = $controllerBuilder->writeController();
+			
+				if ($writeController == 'success')
+				{
+					echo "\n\n\tSuccess !\n\n\tWork on \"src/app/controllers/\"\n\n";
+				} else if ($writeController == 'error') {
+					echo "\tPlease, choose a name for your controller.\n\tIf you need some help, enter \"controller help\"\n\n";
+				} else if ($writeController == 'file_exists') {
+					echo "\tThis controller is already existing. Use this controller, or create a different one.";
+				}
+			} else if ($argv[2] == 'model') {
+				echo "\tWhat is your model's name ? \n";
+		
+				$writeManager = $modelBuilder->writeManager();
+			
+				if ($writeManager == 'success')
+				{
+					echo "\n\n\tSuccess !\n\n\tWork on \"src/app/models/\"\n\n";
+				} else if ($writeManager == 'error') {
+					echo "\tPlease, choose a name for your model.\n\tIf you need some help, enter \"model help\"\n\n";
+				} else if ($writeManager == 'file_exists') {
+					echo "\tThis model is already existing. Use this model, or create a different one.";
+				}
+			} else if ($argv[2] == 'form') {
+				echo "\tWhat is your form's name ?\n";
+				
+				$writeFormClass = $formBuilder->writeFormClass();
+				
+				if ($writeFormClass == 'success')
+				{
+					echo "\n\n\tSuccess !\n\n\tImport your form class on your controller : \n\t\"use Styletools\Forms\YourForm\"\n\n";
+				} else if ($writeFormClass == 'error') {
+					echo "\tPlease, choose a name for your form class.\n\tIf you need some help, enter \"form help\"\n\n";
+				} else if ($writeFormClass == 'file_exists') {
+					echo "\tThis form class is already existing. Use this form class, or create a different one.";
+				}
+			} else {
+				echo "\"".$argv[2]."\" is not a valid argument.\n\nDid you mean : \n\t\"new controller\"\n\t\"new model\"\n\t\"new form\" ?\n";
+			}
+		} else {
+			echo "\n\"".$argv[1]."\" is not a valid command\n\nDid you mean : \n\t\"new controller\"\n\t\"new model\"\n\t\"new form\" ?\n";
+		}	
+	} else if ($argv[1] == '?') {
+		print "
+	Here is the list of actions you can do.\n
+	new controller : create a new controller
+	new model : create a new model
+	new form : create a new file which contains your forms
+	new style : create a new file which contains your styles input
+	controller help : documentation about controllers
+	model help : documentation about models
+	form help : documentation about forms
+	style help : documentation about styles
+	";
+	} else {
+		echo '"'.$argv[1].'" is not a valid keyword. Press "?" to see the right options.';
+	}
+} else {
+	echo "Please, you have to enter an action.\nFor more informations, enter \"?\".";
+}

@@ -1,0 +1,173 @@
+/*!
+ * Styletools 1.5
+ * Copyright 2019 Argan Piquet
+ * Author : Argan Piquet
+ */
+ 
+@media screen and (min-width:992px) and (max-width:1199px) {
+	body {overflow-x:hidden;}
+	
+	ul.navbar_gateways {
+		width:55%;
+		margin-right:15px;
+	}
+	
+	ul.navbar_gateways li, ul.navbar_gateways li a {
+		font-size:18px;
+	}
+	
+	/* Dropdown menu */
+	.dropdown_menu {
+		width:40%;
+	}
+	
+	ul.dropdown_menu_gateways li, ul.dropdown_menu_gateways li a {
+		font-size:20px;
+	}
+	
+	.btn {
+		font-size:18px;
+	}
+	
+	/* Inputs */
+	input[type=text], input[type=email], input[type=password], input[type=date], input[type=file], input[type=search], textarea {
+		font-size:18px;
+	}
+	
+	/* Progress bars */
+	.bar {
+		width: 70%
+	}
+	
+	footer {
+		font-size:20px;
+	}
+}
+
+/*** Medium screens ***/
+@media screen and (min-width:768px) and (max-width:991px) {
+	body {overflow-x:hidden;}
+	
+	/* Navbar */	
+	ul.navbar_gateways {
+		width:50%;
+		margin-right:15px;
+	}
+	
+	ul.navbar_gateways li, ul.navbar_gateways li a {
+		font-size:18px;
+	}
+	
+	/* Dropdown menu */
+	.dropdown_menu {
+		width:40%;
+	}
+	
+	ul.dropdown_menu_gateways li, ul.dropdown_menu_gateways li a {
+		font-size:20px;
+	}
+	
+	/* Inputs */
+	input[type=text], input[type=email], input[type=password], input[type=date], input[type=file], input[type=search], textarea {
+		font-size:18px;
+	}
+	
+	/* Buttons */
+	.btn {
+		font-size:18px;
+	}
+	
+	/* Progress bars */
+	.bar {
+		width: 80%
+	}
+	
+	footer {
+		font-size:20px;
+	}
+}
+
+/*** Small screens ***/
+@media screen and (min-width:544px) and (max-width:767px) {
+	body {overflow-x:hidden;}
+	
+	/* Navbar */	
+	nav.vertical_navbar {
+		width:100%;
+	}
+	
+	/* Inputs */
+	input[type=text], input[type=email], input[type=password], input[type=date], input[type=file], input[type=search], textarea {
+		width:90%;
+	}
+	
+	/* Modal box */
+	.modal_box_content {
+		width:80%;
+	}
+	
+	#box_teal {
+		width:100%;
+		padding:10px;
+	}
+	
+	/* Progress bars */
+	.bar {
+		width: 80%;
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+	
+	footer {
+		font-size:20px;
+	}
+}
+
+/*** X Small screens ***/
+@media screen and (max-width:543px) {
+	body {overflow-x:hidden;}
+	
+	/* Navbar */
+	nav.vertical_navbar {
+		width:100%;
+	}
+	
+	ul.dropdown_menu_gateways li, ul.dropdown_menu_gateways li a {
+		font-size:20px;
+	}
+	
+	/* Forms */
+	form.large_form {
+		width:100%;
+	}
+	
+	/* Inputs */
+	input[type=text], input[type=email], input[type=password], input[type=date], input[type=file], input[type=search], textarea {
+		width:90%;
+	}
+	
+	.btn {
+		font-size:18px;
+	}
+	
+	/* Modal box */
+	.modal_box_content {
+		width:80%;
+	}
+	
+	#box_teal {
+		width:100%;
+		padding:10px;
+	}
+	
+	/* Progress bars */
+	.bar {
+		width: 80%;
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+	
+	footer {
+		font-size:20px;
+	}
+}

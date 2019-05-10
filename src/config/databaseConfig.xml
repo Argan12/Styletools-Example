@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<databaseConfig>
+	<hostname>yourhostname</hostname>
+	<dbname>yourdbname</dbname>
+	<username>yourusername</username>
+	<password>yourpassword</password>
+</databaseConfig>

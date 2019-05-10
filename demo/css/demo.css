@@ -1,0 +1,179 @@
+/*!
+ * Styletools Demo Stylesheet
+ * Styletools 1.4
+ * Copyright 2019 Argan Piquet
+ * Author : Argan Piquet
+ */
+ 
+body {
+	font-family:Open Sans, sans-serif;
+}
+
+nav.horizontal_navbar {
+	color:#FFFFFF;
+	background-color:#333333;
+}
+
+ul.navbar_gateways li a:hover, ul.navbar_gateways li:hover {
+	background-color:#777777;
+}
+
+.dropdown_menu {
+	background-color:#333333;
+}
+
+ul.dropdown_menu_gateways li:hover {
+	background-color:#777777;
+}
+
+nav.vertical_navbar {
+	display:none;
+}
+
+@media screen and (min-width:1200px) {
+	.navicon {
+		display:none;
+	}
+}
+
+input[type=search] {
+	width:70%;
+	height:35px;
+}
+
+.btn {
+	margin-top:20px;
+	margin-bottom:20px;
+	background-color:#68ACD1;
+}
+
+.btn:hover {
+	background-color:#5E9BBC;
+}
+
+section#main, section#contact {
+	display:flex;
+	flex-direction:column;
+	width:100vw;
+	min-height:100vh;
+	justify-content:center;
+	align-items:center;
+}
+
+section#main {
+	background-image:url("../img/IMG_20180915_111514.jpg");
+	background-attachment:fixed;
+	background-size:cover;
+}
+
+section#main p {
+	font-size:22px;
+	color:#FFFFFF;
+}
+
+h1.big {color:#FFFFFF;}
+
+section#contact {
+	background-color:#FFFFFF;
+}
+
+section#contact h2 {
+	margin-top:100px;
+}
+
+input[type=text], input[type=email] {
+	border:1px solid #E0E0E0;
+}
+
+textarea {
+	border:1px solid #E0E0E0;
+}
+
+textarea:focus {
+	height:200px;
+}
+
+footer {
+	color:#FFFFFF;
+	background-color:#333333;
+}
+
+@media screen and (min-width:992px) and (max-width:1199px) {
+	.navicon {
+		display:none;
+	}
+	
+	nav.vertical_navbar {
+		display:none;
+	}
+}
+
+@media screen and (min-width:768px) and (max-width:991px) {
+	.navicon {
+		display:none;
+	}
+	
+	nav.vertical_navbar {
+		display:none;
+	}
+	
+	input[type=search] {
+		width:100%;
+	}
+}
+
+@media screen and (min-width:544px) and (max-width:767px) {
+	nav.horizontal_navbar img, nav.horizontal_navbar input {
+		display:none;
+	}
+	
+	nav.vertical_navbar {
+		display:none;
+		margin-top:70px;
+		border-top:1px solid #FFFFFF;
+		background-color:#333333;
+	}
+	
+	ul.navbar_gateways {
+		display:none;
+	}
+
+	nav.vertical_navbar ul li {
+		font-size:22px;
+	}
+	
+	section#main, section#contact {
+		padding:20px;
+		box-sizing:border-box;
+	}
+	
+	section#main h1 {
+		text-align:center;
+	}
+}
+
+@media screen and (max-width:543px) {
+	nav.horizontal_navbar img, nav.horizontal_navbar input {
+		display:none;
+	}
+	
+	nav.vertical_navbar {
+		display:none;
+		margin-top:70px;
+		border-top:1px solid #FFFFFF;
+		background-color:#333333;
+	}
+	
+	ul.navbar_gateways {
+		display:none;
+	}
+	
+	section#main, section#contact {
+		padding:20px;
+		box-sizing:border-box;
+	}
+	
+	section#main h1 {
+		text-align:center;
+	}
+}

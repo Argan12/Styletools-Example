@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+
+<html class="smooth no-js" lang="">
+
+<head>
+	<meta charset="utf-8"  />
+	<meta http-equiv="x-ua-compatible" content="ie=edge"  />
+	<meta name="description" content=""  />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"  />
+
+	<link rel="manifest" href="site.webmanifest"  />
+	<link rel="apple-touch-icon" href="icon.png"  />
+	<!-- Place favicon.ico in the root directory -->
+
+	<link rel="stylesheet" href="../dist/css/styletools.min.css"  /> <!-- Place styletools css first -->
+	<link rel="stylesheet" href="../css/responsive_application.css"  />
+	
+	<link rel="stylesheet" href="css/normalize.css"  />
+	<link rel="stylesheet" href="css/main.css"  />
+	<link rel="stylesheet" href="css/demo.css"  />
+	
+	<title>Styletools</title>
+</head>
+
+<body>
+	<!--[if lte IE 9]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+	<![endif]-->
+
+	<nav class="horizontal_navbar">
+		<!-- Place navicon first if you want it to be on the left -->
+		<div class="navicon" onclick="naviconTransition(this)">
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			<div class="bar3"></div>
+		</div>
+		
+		<img src="img/portfolio_icon_32x32.png" alt="Styletools logo"  />
+		
+		<form class="little_form row" action="#" method="post">
+			<input type="search" name="q" placeholder="Search.."  />
+		</form>
+		
+		<ul class="navbar_gateways">
+			<li><a href="#" class="bc_transition">Introduction</a></li>
+			<li><a href="#contact" class="bc_transition">Contact</a></li>
+			<li><a href="#" onclick="document.getElementById('modal_box').style.display='block'" class="bc_transition">Modal box</a></li>
+			<li id="icon" class="bc_transition">Dropdown Menu</li>
+		</ul>
+	</nav>
+	
+	<nav class="vertical_navbar">
+		<ul class="dropdown_menu_gateways">
+			<li><a href="#" class="bc_transition">Introduction</a></li>
+			<li><a href="#contact" class="bc_transition">Contact</a></li>
+			<li><a href="#" onclick="document.getElementById('modal_box').style.display='block'" class="bc_transition">Modal box</a></li>
+			<li><a id="icon" class="bc_transition">Dropdown menu</a></li>
+		</ul>
+	</nav>
+	
+	<div class="dropdown_menu">
+		<ul class="dropdown_menu_gateways">
+			<li class="bc_transition"><a href="#">Link 1</a></li>
+			<li class="bc_transition"><a href="#">Link 2</a></li>
+			<li class="bc_transition"><a href="#">Link 3</a></li>
+		</ul>
+	</div>
+
+	<!-- Modal box -->
+	<div id="modal_box" class="modal_box">
+		<div class="modal_box_content box_animate_top box_card_4">
+			<header class="modal_box_content" id="box_teal">
+				<span onclick="document.getElementById('modal_box').style.display='none'" class="box_button box_display_topright">&times;</span>
+				<h2>Thanks using the Styletools !</h2>
+			</header>
+		
+			<div class="box_container">
+				<p>Have a nice work on your projects with the Styletools framework !</p>
+				
+				<div class="btn bc_transition" onclick="document.getElementById('modal_box').style.display='none'">Close</div> 
+			</div>
+			
+			<footer class="modal_footer box_container" id="box_teal">
+				<p style="visibility:hidden">.</p>
+			</footer>
+		</div>
+	</div>
+	
+	<section id="main">
+		<h1 class="big">Welcome on the Styletools demo !</h1>
+		<p>Thank you for your support !</p>
+	</section>
+	
+	<section id="contact">
+		<h2 class="medium">Contact us</h2>
+		
+		<form class="large_form column" onsubmit="return formValidation(this)">
+			<label for="firstname">Firstname :</label>
+			<input type="text" id="firstname" name="firstname"  />
+			<label for="lastname">Lastname :</label>
+			<input type="text" id="lastname" name="lastname"  />
+			<label for="email">Mail address :</label>
+			<input type="email" id="mail" name="mail"  />
+			<label for="object">Object :</label>
+			<input type="text" id="object" name="object"  />
+			<label for="message">Message :</label>
+			<textarea class="height_transition" id="message" name="message"></textarea>
+			<input type="submit" class="btn bc_transition" value="Submit"  />
+		</form>
+		
+		<p class="red_alert">* This contact form is an example. It does not works.</p>
+	</section>
+	
+	<footer>
+		<p>&copy; <span class="copyright"></span> - Styletools</p>
+	</footer>
+
+	<script src="js/vendor/modernizr-3.6.0.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+	<script src="../js/styletools.js"></script> <!-- Place styletools javascript first -->
+	<script src="js/plugins.js"></script>
+	<script src="js/main.js"></script>
+
+	<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+	<script>
+		window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+		ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+	</script>
+	<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+
+</html>

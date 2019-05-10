@@ -1,0 +1,30 @@
+{
+    "name": "gwereve/getstyletools",
+    "description": "MVC PHP and CSS Framework",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Argan",
+            "email": "argan.piquet@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "^2.0",
+		"php": "7.1.9",
+        "plasticbrain/php-flash-messages": "^1.0"
+    },
+	"autoload": {
+		"psr-4": {
+			"Styletools\\Models\\": "src/app/models/",
+			"Styletools\\Controllers\\": "src/app/controllers/",
+			"Styletools\\Styles\\": "src/styles/",
+			"Styletools\\Forms\\": "src/forms/",
+			"Styletools\\Libs\\": "vendor/styletools/libs/",
+			"Styletools\\Libs\\Controller\\": "vendor/styletools/controller/",
+			"Styletools\\Libs\\Router\\": "vendor/styletools/router/",
+			"Styletools\\Libs\\Console\\": "vendor/styletools/console/",
+			"Styletools\\Libs\\Components\\": "vendor/styletools/components/",
+			"Styletools\\": ""
+		}
+	}
+}
